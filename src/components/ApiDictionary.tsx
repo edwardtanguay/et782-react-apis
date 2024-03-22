@@ -23,7 +23,7 @@ export const ApiDictionary = () => {
 
 	return (
 		<form>
-			<ApiCard>
+			<ApiCard cardWidth="20rem">
 				<input value={word} onChange={(e) => setWord(e.target.value)} />
 				<button onClick={(e) => handleGetDefinition(e)}>Get definition</button>
 				<p>{definition}</p>

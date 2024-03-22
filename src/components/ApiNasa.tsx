@@ -24,7 +24,7 @@ export const ApiNasa = () => {
 
 	return (
 		<form>
-			<ApiCard>
+			<ApiCard cardWidth="30rem">
 				<input value={date} onChange={(e) => setDate(e.target.value)} />
 				<button onClick={(e) => handleGetPhoto(e)}>Get photo of the day</button>
 				<img src={imageUrl} />
