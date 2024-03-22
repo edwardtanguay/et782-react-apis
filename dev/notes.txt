@@ -6,9 +6,12 @@
 	- x make dynamic
 	- x show defintion
 
-- .. create NASA API component
+-  create NASA API component
 	- x create base component with parts and styling
 	- x get data from API and console.log 
 	- x get explanation and photo url into state variables and display
 	- x pass on the day to the API
-	- .. add key to .env file
+	- x add key to .env file
+
+- .. refactoring with higher-order component
+	- .. create ApiCard.tsx
