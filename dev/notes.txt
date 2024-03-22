@@ -7,4 +7,5 @@
 	- x show defintion
 
 - .. create NASA API component
-	- create base component with parts and styling
+	- x create base component with parts and styling
+	- .. get data from API and console.log 
