@@ -14,7 +14,9 @@ export const ApiNasa = () => {
 			const response = await axios.get(url);
 			const data = response.data;
 			const _explanation = data.explanation;
+			const _imageUrl = data.url;
 			setExplanation(_explanation);
+			setImageUrl(_imageUrl);
 		})();
 	}
 
@@ -23,6 +25,7 @@ export const ApiNasa = () => {
 			<div className="flex gap-5 flex-col bg-slate-200 p-6 w-[20rem] rounded">
 				<input value={date} onChange={(e) => setDate(e.target.value)} />
 				<button onClick={(e) => handleGetPhoto(e)}>Get photo of the day</button>
+				<img src={imageUrl}/>
 				<p>{explanation}</p>
 			</div>
 		</form>
