@@ -8,4 +8,5 @@
 
 - .. create NASA API component
 	- x create base component with parts and styling
-	- .. get data from API and console.log 
+	- x get data from API and console.log 
+	- .. get explanation and photo url into state variables and display
