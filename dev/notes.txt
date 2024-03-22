@@ -1,7 +1,10 @@
-- .. create dictionary API component
+- x create dictionary API component
 	- x make input work
 	- x click button and show console.log data from API
 		- x click buttton show alert
 	- x change iife to function
 	- x make dynamic
-	- .. show defintion
+	- x show defintion
+
+- .. create NASA API component
+	- create base component with parts and styling
