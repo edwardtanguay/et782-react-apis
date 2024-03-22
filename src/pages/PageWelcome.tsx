@@ -1,5 +1,9 @@
+import { ApiDictionary } from "../components/ApiDictionary"
+
 export const PageWelcome = () => {
 	return (
-		<p>to be continued...</p>
+		<>
+		<ApiDictionary/>
+		</>
 	)
 }
