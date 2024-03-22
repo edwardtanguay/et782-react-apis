@@ -4,7 +4,8 @@ import axios from 'axios';
 const url = 'https://api.dictionaryapi.dev/api/v2/entries/en';
 
 export const ApiDictionary = () => {
-	const [word, setWord] = useState('horse');
+	const [word, setWord] = useState('');
+	const [definition, setDefinition] = useState('');
 
 	const getData = async () => {
 		const response = await axios.get(`${url}/${word}`);
@@ -15,7 +16,8 @@ export const ApiDictionary = () => {
 	const handleGetDefinition = async (e: React.MouseEvent<HTMLButtonElement>) => {
 		e.preventDefault();
 		const data = await getData();
-		console.log('test', data[0].meanings[0].definitions[0].definition);
+		const _definition = data[0].meanings[0].definitions[0].definition;
+		setDefinition(_definition);
 	}
 
 	return (
@@ -23,7 +25,7 @@ export const ApiDictionary = () => {
 			<div className="flex gap-5 flex-col bg-slate-200 p-6 w-[20rem] rounded">
 				<input value={word} onChange={(e) => setWord(e.target.value)} />
 				<button onClick={(e) => handleGetDefinition(e)}>Get definition</button>
-				<p>(definition)</p>
+				<p>{definition}</p>
 			</div>
 		</form>
 	)
