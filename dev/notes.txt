@@ -10,4 +10,5 @@
 	- x create base component with parts and styling
 	- x get data from API and console.log 
 	- x get explanation and photo url into state variables and display
-	- .. pass on the day to the API
+	- x pass on the day to the API
+	- .. add key to .env file

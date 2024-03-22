@@ -1,6 +1,8 @@
 import axios from "axios";
 import React, { useState } from "react";
 
+const nasaApiKey = import.meta.env.VITE_NASA_KEY;
+
 export const ApiNasa = () => {
 	const [date, setDate] = useState('');
 	const [explanation, setExplanation] = useState('');
@@ -9,7 +11,7 @@ export const ApiNasa = () => {
 	const handleGetPhoto = (e:React.MouseEvent<HTMLButtonElement>) => {
 		e.preventDefault();
 		(async () => {
-			const url = `https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=${date}`;
+			const url = `https://api.nasa.gov/planetary/apod?api_key=${nasaApiKey}&date=${date}`;
 			const response = await axios.get(url);
 			const data = response.data;
 			const _explanation = data.explanation;
