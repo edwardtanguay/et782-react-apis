@@ -1,0 +1,2 @@
+- .. create dictionary API component
+	- .. click button and show console.log data from API
