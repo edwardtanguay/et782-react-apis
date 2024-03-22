@@ -2,4 +2,5 @@
 	- x make input work
 	- x click button and show console.log data from API
 		- x click buttton show alert
-	- .. change iife to function
+	- x change iife to function
+	- .. make dynamic

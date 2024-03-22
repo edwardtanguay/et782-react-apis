@@ -4,10 +4,10 @@ import axios from 'axios';
 const url = 'https://api.dictionaryapi.dev/api/v2/entries/en';
 
 export const ApiDictionary = () => {
-	const [word, setWord] = useState('house');
+	const [word, setWord] = useState('');
 
 	const getData = async () => {
-		const response = await axios.get(`${url}/house`);
+		const response = await axios.get(`${url}/${word}`);
 		const data = (response).data;
 		return data;
 	}
