@@ -4,7 +4,7 @@ import axios from 'axios';
 const url = 'https://api.dictionaryapi.dev/api/v2/entries/en';
 
 export const ApiDictionary = () => {
-	const [word, setWord] = useState('');
+	const [word, setWord] = useState('horse');
 
 	const getData = async () => {
 		const response = await axios.get(`${url}/${word}`);
@@ -15,7 +15,7 @@ export const ApiDictionary = () => {
 	const handleGetDefinition = async (e: React.MouseEvent<HTMLButtonElement>) => {
 		e.preventDefault();
 		const data = await getData();
-		console.log(data);
+		console.log('test', data[0].meanings[0].definitions[0].definition);
 	}
 
 	return (

@@ -3,4 +3,5 @@
 	- x click button and show console.log data from API
 		- x click buttton show alert
 	- x change iife to function
-	- .. make dynamic
+	- x make dynamic
+	- .. show defintion
