@@ -1,13 +1,19 @@
-import React, { useState } from "react"
+import React, { useState } from "react";
+import axios from 'axios';
 
 const url = 'https://api.dictionaryapi.dev/api/v2/entries/en';
 
 export const ApiDictionary = () => {
 	const [word, setWord] = useState('house');
 
-	const handleGetDefinition = (e:React.MouseEvent<HTMLButtonElement>) => {
+	const handleGetDefinition = (e: React.MouseEvent<HTMLButtonElement>) => {
 		e.preventDefault();
-		alert('clicked')
+
+		(async () => {
+			const response = await axios.get(`${url}/house`);
+			const data = (response).data;
+			console.log(data);
+		})();
 	}
 
 	return (

@@ -1,5 +1,5 @@
 - .. create dictionary API component
 	- x make input work
 	- .. click button and show console.log data from API
-		- .. click buttton show alert
-		
+		- x click buttton show alert
+	- change iife to function
