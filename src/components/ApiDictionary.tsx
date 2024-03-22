@@ -6,14 +6,16 @@ const url = 'https://api.dictionaryapi.dev/api/v2/entries/en';
 export const ApiDictionary = () => {
 	const [word, setWord] = useState('house');
 
-	const handleGetDefinition = (e: React.MouseEvent<HTMLButtonElement>) => {
-		e.preventDefault();
+	const getData = async () => {
+		const response = await axios.get(`${url}/house`);
+		const data = (response).data;
+		return data;
+	}
 
-		(async () => {
-			const response = await axios.get(`${url}/house`);
-			const data = (response).data;
-			console.log(data);
-		})();
+	const handleGetDefinition = async (e: React.MouseEvent<HTMLButtonElement>) => {
+		e.preventDefault();
+		const data = await getData();
+		console.log(data);
 	}
 
 	return (
